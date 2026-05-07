@@ -1,19 +1,19 @@
 import WaveAnimation from '@/components/WaveAnimation'
-import { HeaderContainer } from './style'
+import { HeaderMaintanceContainer } from './style'
 
-export default function Header() {
+export default function HeaderMaintance() {
   return (
-    <HeaderContainer>
+    <HeaderMaintanceContainer>
       <div className="logo-container">
         <img
           src="/images/logo.png"
-          alt="Logo Nappanautas"
-          width={210}
+          alt="Logo turvaFM"
+          width={285}
           height={114}
           draggable="false"
         />
       </div>
       <WaveAnimation />
-    </HeaderContainer>
+    </HeaderMaintanceContainer>
   )
 }

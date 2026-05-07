@@ -22,7 +22,7 @@ export interface IStreamInfos {
 
 export interface IStreamContext {
   // streamData: IStreamData | null
-  streamInfos: IStreamInfos | null
+  streamInfos: IStreamInfos
   toggleAudio: (action: 'play' | 'pause') => void
   loadingPlayerData: boolean
   updateRadioData: () => Promise<void>

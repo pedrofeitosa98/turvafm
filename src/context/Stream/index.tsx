@@ -11,7 +11,16 @@ export const StreamContext = createContext<IStreamContext>({} as IStreamContext)
 
 export function StreamProvider({ children }: IStreamProviderProps) {
   const [loadingPlayerData, setLoadingPlayerData] = useState(true)
-  const [streamInfos, setStreamInfos] = useState<IStreamInfos | null>(null)
+  const [streamInfos, setStreamInfos] = useState<IStreamInfos>({
+    art: 'capa da musica',
+    bitrate: '128',
+    djprofile: '/images/avatar-autodj.png',
+    djusername: 'No DJ',
+    history: ['musica 1', 'musica 2', 'musica 3', 'etc'],
+    title: 'musica atual',
+    listeners: 'ouvintes',
+    ulistener: 'ouvintes unicos',
+  })
   const [playerRef, setPlayerRef] = useState<HTMLAudioElement | null>(null)
 
   useEffect(() => {
@@ -36,7 +45,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
   const getRadioData = async () => {
     try {
       // const { data } = await radioAPI().get(':7017/statistics?json=1')
-      const response = await fetch(`${baseURL}'/cp/get_info.php?p=8034'`)
+      const response = await fetch(`${baseURL}/cp/get_info.php?p=8034`)
 
       if (!response.ok) {
         throw new Error(response.statusText)
@@ -56,7 +65,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
     try {
       setLoadingPlayerData(true)
       // const { data } = await radioAPI().get(':7017/statistics?json=1')
-      const response = await fetch(`${baseURL}'/cp/get_info.php?p=8034'`)
+      const response = await fetch(`${baseURL}/cp/get_info.php?p=8034`)
 
       if (!response.ok) {
         throw new Error(response.statusText)

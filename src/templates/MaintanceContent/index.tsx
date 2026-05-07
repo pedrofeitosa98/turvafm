@@ -1,7 +1,7 @@
 import Player from '@/patterns/Player'
 import MaintanceArticle from '@/patterns/MaintanceArticle'
 import { MaintanceContentStyle } from './style'
-import MaintanceTwitterTimeline from '@/patterns/MaintanceTwitterTimeline'
+import MaintanceTimeline from '#/patterns/MaintanceTimeline'
 
 export default function MaintanceContent() {
   return (
@@ -11,7 +11,7 @@ export default function MaintanceContent() {
           <Player />
           <MaintanceArticle />
         </section>
-        <MaintanceTwitterTimeline />
+        <MaintanceTimeline />
       </div>
     </MaintanceContentStyle>
   )

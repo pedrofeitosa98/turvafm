@@ -7,13 +7,27 @@ import {
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import UnifiedProviders from '#/context/unifiedProviders'
-// import Footer from '../components/Footer'
-// import Header from '../components/Header'
+import { ThemeProvider } from 'styled-components'
+import theme from '#/styles/theme'
+import GlobalStyle from '#/styles/global'
+import GlobalAnimations from '#/styles/animations'
+import GlobalTypography from '#/styles/typography'
+import HeaderMaintance from '#/patterns/HeaderMaintance'
+import Footer from '#/patterns/Footer'
 
 function RootComponent() {
   return (
     <UnifiedProviders>
-      <Outlet />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <GlobalAnimations />
+        <GlobalTypography />
+        <main id="root">
+          <HeaderMaintance />
+          <Outlet />
+          <Footer />
+        </main>
+      </ThemeProvider>
     </UnifiedProviders>
   )
 }
@@ -31,17 +45,13 @@ export const Route = createRootRoute({
       {
         title: '.: turvaFM :.',
       },
-    ],
-    links: [
       {
-        rel: 'stylesheet',
-        href: '../src/styles/global.css',
-      },
-      {
-        rel: 'stylesheet',
-        href: '../src/styles/animations.css',
+        name: 'description',
+        content:
+          'turvaFM é um fã-site e a primeia rádio do Turva. Procuramos proporcionar diversão através de programações diversas e interações diretas com vocês jogadores e ouvintes, além de - é claro - muita música!',
       },
     ],
+    links: [],
   }),
   component: RootComponent,
   shellComponent: RootDocument,
@@ -54,10 +64,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {/* <Header /> */}
         {children}
-        {/* <Footer /> */}
-        <TanStackDevtools
+        {/* <TanStackDevtools
           config={{
             position: 'bottom-right',
           }}
@@ -67,7 +75,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               render: <TanStackRouterDevtoolsPanel />,
             },
           ]}
-        />
+        /> */}
         <Scripts />
       </body>
     </html>

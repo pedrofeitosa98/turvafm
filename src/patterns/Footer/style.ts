@@ -1,5 +1,5 @@
 import { VLine } from '@/components/VLine/style'
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const FooterStyle = styled.footer`
   width: 100%;
@@ -12,7 +12,7 @@ export const FooterStyle = styled.footer`
 
   background: ${({ theme }) => theme.colors.background};
 
-  .nappafs-stamp {
+  .fansite-stamp {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,13 +55,13 @@ export const FooterStyle = styled.footer`
   @media (max-width: 1366px) {
     padding: 10px;
 
-    .nappafs-stamp {
+    .fansite-stamp {
       height: 94px;
     }
   }
 
   @media (max-width: 580px) {
-    .nappafs-stamp {
+    .fansite-stamp {
       display: none;
     }
 

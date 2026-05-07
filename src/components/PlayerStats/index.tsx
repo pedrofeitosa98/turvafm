@@ -8,9 +8,7 @@ export default function PlayerStats() {
     useContext(StreamContext)
 
   const djusername =
-    streamInfos?.djusername === 'No DJ'
-      ? 'Nappanautas'
-      : streamInfos?.djusername
+    streamInfos.djusername === 'No DJ' ? 'turvaFM' : streamInfos.djusername
 
   return (
     <PlayerStatsStyle loadingPlayerData={loadingPlayerData}>
@@ -18,20 +16,18 @@ export default function PlayerStats() {
         <p className="dj">
           Você está ouvindo{' '}
           <span onClick={updateRadioData}>
-            {loadingPlayerData ? '...' : djusername ?? 'Nappanautas'}
+            {loadingPlayerData ? '...' : djusername}
           </span>
         </p>
         <p className="show">
           Com a programação{' '}
           <span onClick={updateRadioData}>
-            {loadingPlayerData
-              ? '...'
-              : djshow(streamInfos?.djusername ?? 'No DJ')}
+            {loadingPlayerData ? '...' : djshow(streamInfos.djusername)}
           </span>
         </p>
       </div>
       <button type="button" className="listeners" onClick={updateRadioData}>
-        {loadingPlayerData ? '...' : streamInfos?.listeners}
+        {loadingPlayerData ? '...' : streamInfos.listeners}
       </button>
     </PlayerStatsStyle>
   )

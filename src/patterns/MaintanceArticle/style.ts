@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const MaintanceArticleStyle = styled.article`
   display: flex;

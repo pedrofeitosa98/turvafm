@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import { styled, css } from 'styled-components'
 
 export const PlayerStatsStyle = styled.div<{ loadingPlayerData: boolean }>`
   display: flex;
