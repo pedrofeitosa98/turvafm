@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { StreamContext } from '@/context/Stream'
-import './style.css'
+import { PlayerDJStyle } from './style'
 
 export default function PlayerDJ() {
   const { streamInfos, loadingPlayerData } = useContext(StreamContext)
@@ -11,19 +11,9 @@ export default function PlayerDJ() {
       : streamInfos.djprofile
 
   return (
-    <div
-      id="player-dj"
-      // loadingPlayerData={loadingPlayerData}
-    >
+    <PlayerDJStyle avatarurl={avatarurl} loadingPlayerData={loadingPlayerData}>
       <div className="avatar-container"></div>
-      <div
-        className={`avatar-img ${loadingPlayerData ? 'avatar-img_loading' : ''}`}
-        style={
-          {
-            '--avatar-url': `url(${avatarurl})`,
-          } as React.CSSProperties
-        }
-      ></div>
-    </div>
+      <div className="avatar-img"></div>
+    </PlayerDJStyle>
   )
 }

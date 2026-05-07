@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const MaintanceContentStyle = styled.div`
   flex-grow: 1;

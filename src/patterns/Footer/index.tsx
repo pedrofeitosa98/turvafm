@@ -1,14 +1,14 @@
 import { VLine } from '@/components/VLine/style'
 import { FooterStyle } from './style'
-import { FaCode, FaHeart, FaPaintbrush } from 'react-icons/fa6'
+import { FaCode, FaPaintbrush } from 'react-icons/fa6'
 
 export default function Footer() {
   return (
     <FooterStyle>
-      <div className="nappafs-stamp">
+      <div className="fansite-stamp">
         <img
-          src="/images/nappafs.png"
-          alt="Selo de fã-site do Nappa Hotel"
+          src="/images/fsstamp.png"
+          alt="Selo de fã-site da Turva"
           width={123}
           height={64}
           draggable="false"
@@ -17,10 +17,10 @@ export default function Footer() {
       <VLine color="gray" height="60px" />
       <div className="footer-text">
         <div>
-          <strong>© 2023 Nappanautas </strong>
-          <p>é um fã-site do </p>
-          <a href="https://nappahotel.com/" target="_blank">
-            Nappa Hotel
+          <strong>© 2026 turvaFM </strong>
+          <p>é um fã-site da </p>
+          <a href="http://turva.com.br/" target="_blank" rel="noopener">
+            Pousada Turva
           </a>
           <p> e não possui envolvimento com a Sulake Oy.</p>
         </div>

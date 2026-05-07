@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const HeaderMaintanceContainer = styled.header`
   width: 100%;
   height: 180px;
   position: relative;
