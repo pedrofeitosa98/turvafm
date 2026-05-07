@@ -1,13 +1,17 @@
 import { styled, css } from 'styled-components'
 
 interface IVLineProps {
-  color: 'primary' | 'secondary' | 'gray'
-  height: string
-  flip90?: boolean
+  $color: 'primary' | 'secondary' | 'gray'
+  $height: string
+  $flip90?: boolean
 }
 
-function colorPalette({ color }: { color: 'primary' | 'secondary' | 'gray' }) {
-  switch (color) {
+function colorPalette({
+  $color,
+}: {
+  $color: 'primary' | 'secondary' | 'gray'
+}) {
+  switch ($color) {
     case 'primary':
       return css`
         background-color: ${(props) => props.theme.colors.primaryLighter};
@@ -29,6 +33,6 @@ function colorPalette({ color }: { color: 'primary' | 'secondary' | 'gray' }) {
 
 export const VLine = styled.div<IVLineProps>`
   width: 1px;
-  height: ${({ height }) => height};
-  ${({ color }: IVLineProps) => colorPalette({ color })}
+  height: ${({ $height }) => $height};
+  ${({ $color }: IVLineProps) => colorPalette({ $color })}
 `

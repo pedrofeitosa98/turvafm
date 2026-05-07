@@ -14,7 +14,7 @@ export default function Footer() {
           draggable="false"
         />
       </div>
-      <VLine color="gray" height="60px" />
+      <VLine $color="gray" $height="60px" />
       <div className="footer-text">
         <div>
           <strong>© 2026 turvaFM </strong>

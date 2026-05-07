@@ -1,8 +1,8 @@
 import { styled, css } from 'styled-components'
 
 export interface IPlayerDJProps {
-  avatarurl: string
-  loadingPlayerData: boolean
+  $avatarurl: string
+  $loadingPlayerData: boolean
 }
 
 export const PlayerDJStyle = styled.div<IPlayerDJProps>`
@@ -33,13 +33,13 @@ export const PlayerDJStyle = styled.div<IPlayerDJProps>`
     width: 64px;
     height: 90px;
 
-    background: url(${({ avatarurl }) => avatarurl});
+    background: url(${({ $avatarurl }) => $avatarurl});
 
     transition: ${({ theme }) => theme.transition};
   }
 
-  ${({ loadingPlayerData }) =>
-    loadingPlayerData &&
+  ${({ $loadingPlayerData }) =>
+    $loadingPlayerData &&
     css`
       .avatar-img {
         opacity: 0.5;
