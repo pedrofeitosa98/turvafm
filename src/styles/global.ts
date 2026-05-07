@@ -19,7 +19,6 @@ body {
 
 html,
 body,
-#root,
 #app {
   /* position: relative; */
   min-height: 100vh;
@@ -43,7 +42,7 @@ body, input, button, ::placeholder {
   font-family: 'Verdana';
 }
 
-body #root {
+body #app {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,8 +111,8 @@ ul {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: ${({ theme }) => theme.colors.primary} ${(props) =>
-    props.theme.colors.background};
+  scrollbar-color: ${({ theme }) => theme.colors.primary} ${({ theme }) =>
+    theme.colors.background};
 }
 
 /* Chrome, Edge, and Safari */

@@ -4,16 +4,16 @@ import {
   Scripts,
   createRootRoute,
 } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
-import UnifiedProviders from '#/context/unifiedProviders'
+// import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+// import { TanStackDevtools } from '@tanstack/react-devtools'
+import UnifiedProviders from '@/context/unifiedProviders'
 import { ThemeProvider } from 'styled-components'
-import theme from '#/styles/theme'
-import GlobalStyle from '#/styles/global'
-import GlobalAnimations from '#/styles/animations'
-import GlobalTypography from '#/styles/typography'
-import HeaderMaintance from '#/patterns/HeaderMaintance'
-import Footer from '#/patterns/Footer'
+import theme from '@/styles/theme'
+import GlobalStyle from '@/styles/global'
+import GlobalAnimations from '@/styles/animations'
+import GlobalTypography from '@/styles/typography'
+import HeaderMaintance from '@/patterns/HeaderMaintance'
+import Footer from '@/patterns/Footer'
 
 function RootComponent() {
   return (
@@ -22,7 +22,7 @@ function RootComponent() {
         <GlobalStyle />
         <GlobalAnimations />
         <GlobalTypography />
-        <main id="root">
+        <main id="app">
           <HeaderMaintance />
           <Outlet />
           <Footer />
@@ -55,6 +55,7 @@ export const Route = createRootRoute({
   }),
   component: RootComponent,
   shellComponent: RootDocument,
+  notFoundComponent: () => <div>dê meia-volta, não tem nada aqui</div>,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {

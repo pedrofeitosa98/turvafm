@@ -56,14 +56,21 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
   }
 
   ${({ $loadingPlayerData }) =>
-    $loadingPlayerData &&
-    css`
-      span,
-      button {
-        opacity: 0.5;
-        pointer-events: none;
-      }
-    `}
+    $loadingPlayerData
+      ? css`
+          span,
+          button {
+            opacity: 0.5;
+            pointer-events: none;
+          }
+        `
+      : css`
+          span,
+          button {
+            opacity: 1;
+            pointer-events: inherit;
+          }
+        `}
 
   @media (max-width: 580px) {
     flex-direction: column;

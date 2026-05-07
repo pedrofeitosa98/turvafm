@@ -1,7 +1,7 @@
 import Player from '@/patterns/Player'
 import MaintanceArticle from '@/patterns/MaintanceArticle'
 import { MaintanceContentStyle } from './style'
-import MaintanceTimeline from '#/patterns/MaintanceTimeline'
+import MaintanceTimeline from '@/patterns/MaintanceTimeline'
 
 export default function MaintanceContent() {
   return (

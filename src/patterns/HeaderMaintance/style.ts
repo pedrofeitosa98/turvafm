@@ -9,7 +9,7 @@ export const HeaderMaintanceContainer = styled.header`
   .logo-container {
     position: relative;
     margin: 0 auto;
-    width: 210px;
+    width: 285px;
     height: 114px;
     z-index: 2;
   }
