@@ -1,6 +1,6 @@
 import { styled, css } from 'styled-components'
 
-export const PlayerStatsStyle = styled.div<{ loadingPlayerData: boolean }>`
+export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
   display: flex;
   gap: 10px;
   flex-grow: 1;
@@ -55,8 +55,8 @@ export const PlayerStatsStyle = styled.div<{ loadingPlayerData: boolean }>`
     transition: ${({ theme }) => theme.transition};
   }
 
-  ${({ loadingPlayerData }) =>
-    loadingPlayerData &&
+  ${({ $loadingPlayerData }) =>
+    $loadingPlayerData &&
     css`
       span,
       button {

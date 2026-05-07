@@ -8,7 +8,7 @@ export const MaintanceContentStyle = styled.div`
 
   width: 100%;
 
-  background-color: ${(props) => props.theme.colors.gray1};
+  background-color: ${({ theme }) => theme.colors.gray1};
 
   & > div {
     display: flex;

@@ -11,7 +11,10 @@ export default function PlayerDJ() {
       : streamInfos.djprofile
 
   return (
-    <PlayerDJStyle avatarurl={avatarurl} loadingPlayerData={loadingPlayerData}>
+    <PlayerDJStyle
+      $avatarurl={avatarurl}
+      $loadingPlayerData={loadingPlayerData}
+    >
       <div className="avatar-container"></div>
       <div className="avatar-img"></div>
     </PlayerDJStyle>

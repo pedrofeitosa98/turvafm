@@ -11,7 +11,7 @@ export default function PlayerStats() {
     streamInfos.djusername === 'No DJ' ? 'turvaFM' : streamInfos.djusername
 
   return (
-    <PlayerStatsStyle loadingPlayerData={loadingPlayerData}>
+    <PlayerStatsStyle $loadingPlayerData={loadingPlayerData}>
       <div className="stats">
         <p className="dj">
           Você está ouvindo{' '}

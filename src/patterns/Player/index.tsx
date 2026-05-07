@@ -15,9 +15,9 @@ export default function Player() {
       </audio>
 
       <PlayerDJ />
-      <VLine color="primary" height="50px" />
+      <VLine $color="primary" $height="50px" />
       <PlayerStats />
-      <VLine color="primary" height="50px" />
+      <VLine $color="primary" $height="50px" />
       <PlayerActions />
     </PlayerStyle>
   )
