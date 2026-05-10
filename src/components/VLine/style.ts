@@ -36,10 +36,7 @@ function colorPalette({
 }
 
 export const VLine = styled.div<IVLineProps>`
-  /* width: 1px;
+  width: 1px;
   height: ${({ $height }) => $height || '0px'};
-  ${({ $color, theme }: IVLineProps) => colorPalette({ $color, theme })} */
-  background: red;
-  width: 100px;
-  height: 100px;
+  ${({ $color, theme }: IVLineProps) => colorPalette({ $color, theme })}
 `

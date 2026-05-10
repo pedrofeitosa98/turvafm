@@ -1,8 +1,8 @@
-import MaintanceContent from '@/templates/MaintanceContent'
 import { createFileRoute } from '@tanstack/react-router'
+import MaintanceContent from '#/pages/MaintanceContent'
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute('/')({ component: Home })
 
-function App() {
+function Home() {
   return <MaintanceContent />
 }

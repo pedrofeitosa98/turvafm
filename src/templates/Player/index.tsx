@@ -1,8 +1,8 @@
-import PlayerDJ from '@/components/PlayerDJ'
 import { PlayerStyle } from './style'
 import { VLine } from '@/components/VLine/style'
-import PlayerStats from '@/components/PlayerStats'
-import PlayerActions from '@/components/PlayerActions'
+import PlayerDJ from '@/templates/Player/PlayerDJ'
+import PlayerStats from '@/templates/Player/PlayerStats'
+import PlayerActions from '@/templates/Player/PlayerActions'
 
 export default function Player() {
   return (

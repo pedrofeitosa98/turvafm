@@ -1,5 +1,5 @@
-import { VLine } from '@/components/VLine/style'
 import { FooterStyle } from './style'
+import { VLine } from '@/components/VLine/style'
 import { FaCode, FaPaintbrush } from 'react-icons/fa6'
 
 export default function Footer() {
