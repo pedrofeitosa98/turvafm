@@ -1,5 +1,5 @@
-import { VLine } from '@/components/VLine/style'
 import { styled } from 'styled-components'
+import { VLine } from '@/components/VLine/style'
 
 export const FooterStyle = styled.footer`
   width: 100%;

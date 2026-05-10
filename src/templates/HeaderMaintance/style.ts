@@ -2,14 +2,14 @@ import { styled } from 'styled-components'
 
 export const HeaderMaintanceContainer = styled.header`
   width: 100%;
-  height: 180px;
+  height: 115px;
   position: relative;
   margin-top: 50px;
 
   .logo-container {
     position: relative;
     margin: 0 auto;
-    width: 210px;
+    width: 285px;
     height: 114px;
     z-index: 2;
   }

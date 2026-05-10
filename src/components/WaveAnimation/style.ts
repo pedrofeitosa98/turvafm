@@ -11,7 +11,7 @@ export const WaveAnimationContainer = styled.div`
   }
 
   .wave {
-    background: url(/images/wave.svg) repeat-x;
+    background: url('/images/wave.svg') repeat-x;
     position: absolute;
     top: -122px;
     width: 6400px;

@@ -33,17 +33,24 @@ export const PlayerDJStyle = styled.div<IPlayerDJProps>`
     width: 64px;
     height: 90px;
 
-    background: url(${({ $avatarurl }) => $avatarurl});
+    background: ${({ $avatarurl }) =>
+      $avatarurl ? `url(${$avatarurl})` : `url('/images/avatar-autodj.png')`};
 
     transition: ${({ theme }) => theme.transition};
   }
 
   ${({ $loadingPlayerData }) =>
-    $loadingPlayerData &&
-    css`
-      .avatar-img {
-        opacity: 0.5;
-        pointer-events: none;
-      }
-    `}
+    $loadingPlayerData
+      ? css`
+          .avatar-img {
+            opacity: 0.5;
+            pointer-events: none;
+          }
+        `
+      : css`
+          .avatar-img {
+            opacity: 1;
+            pointer-events: inherit;
+          }
+        `}
 `

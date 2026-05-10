@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalTypography = createGlobalStyle`
   //Sizes
-  h1, .title1 { font-size: ${(props) => props.theme.fontSize.px28}; }
-  h2, .title2 { font-size: ${(props) => props.theme.fontSize.px24}; }
-  h3, .title3 { font-size: ${(props) => props.theme.fontSize.px20}; }
+  h1, .title1 { font-size: ${({ theme }) => theme.fontSize.px28}; }
+  h2, .title2 { font-size: ${({ theme }) => theme.fontSize.px24}; }
+  h3, .title3 { font-size: ${({ theme }) => theme.fontSize.px20}; }
 
   // Weights
   .text-thin { font-weight: 300; }

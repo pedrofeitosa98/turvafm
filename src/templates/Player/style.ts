@@ -1,6 +1,6 @@
-import { PlayerDJStyle } from '@/components/PlayerDJ/style'
-import { VLine } from '@/components/VLine/style'
 import { styled } from 'styled-components'
+import { VLine } from '@/components/VLine/style'
+import { PlayerDJStyle } from '@/templates/Player/PlayerDJ/style'
 
 export const PlayerStyle = styled.div`
   display: flex;
