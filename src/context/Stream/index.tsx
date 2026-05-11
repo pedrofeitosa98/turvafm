@@ -24,9 +24,11 @@ export function StreamProvider({ children }: IStreamProviderProps) {
   const [playerRef, setPlayerRef] = useState<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    const player = document.querySelector('audio')
-    setPlayerRef(player)
-  }, [])
+    if (!playerRef) {
+      const player = document.querySelector('audio')
+      setPlayerRef(player)
+    }
+  }, [streamInfos])
 
   function toggleAudio(action: 'play' | 'pause') {
     if (playerRef) {
