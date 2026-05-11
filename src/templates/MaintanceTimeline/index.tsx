@@ -3,7 +3,7 @@ import { MaintanceTimelineStyle } from './style'
 export default function MaintanceTimeline() {
   return (
     <MaintanceTimelineStyle>
-      <h3>Quadro de avisos</h3>
+      <h3 className="text-extra-bold">Quadro de avisos</h3>
       <div>
         <p className="text-extra-bold">Histórico de códigos:</p>
         <ul>
