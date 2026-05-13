@@ -15,7 +15,7 @@ export const MaintanceContentStyle = styled.div`
     align-items: center;
     justify-content: center;
 
-    gap: 30px;
+    gap: 10px;
 
     & .left-coulumn {
       display: flex;

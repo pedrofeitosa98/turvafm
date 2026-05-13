@@ -13,7 +13,6 @@ export const PlayerStyle = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.medium};
   border: 4px solid ${({ theme }) => theme.colors.primaryLighter};
   background: ${({ theme }) => theme.colors.primary};
-  box-shadow: ${({ theme }) => theme.shadows.contentBox};
 
   #true_player {
     display: none;
