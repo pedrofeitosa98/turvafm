@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { StreamContext } from '@/context/Stream'
 import { PlayerStatsStyle } from './style'
-import { djshow } from '@/utils/djshow'
+import { getDJUsername } from '@/utils/getDJUsername'
 
 export default function PlayerStats() {
   const { streamInfos, loadingPlayerData, updateRadioData } =
@@ -22,7 +22,7 @@ export default function PlayerStats() {
         <p className="show">
           Com a programação{' '}
           <span onClick={updateRadioData}>
-            {loadingPlayerData ? '...' : djshow(streamInfos.djusername)}
+            {loadingPlayerData ? '...' : getDJUsername(streamInfos.djusername)}
           </span>
         </p>
       </div>

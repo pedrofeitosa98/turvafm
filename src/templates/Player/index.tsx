@@ -3,15 +3,13 @@ import { VLine } from '@/components/VLine/style'
 import PlayerDJ from '@/templates/Player/PlayerDJ'
 import PlayerStats from '@/templates/Player/PlayerStats'
 import PlayerActions from '@/templates/Player/PlayerActions'
+import { getRadioURL } from '@/utils/getRadioURL'
 
 export default function Player() {
   return (
     <PlayerStyle>
       <audio id="true_player" controls autoPlay preload="none">
-        <source
-          src="https://sonic1.transmissaodigital.com/8034/stream"
-          type="audio/mpeg"
-        />
+        <source src={getRadioURL('audio')} type="audio/mpeg" />
       </audio>
 
       <PlayerDJ />
