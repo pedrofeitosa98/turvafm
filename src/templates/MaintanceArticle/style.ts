@@ -15,7 +15,6 @@ export const MaintanceArticleStyle = styled.article`
   font-size: ${({ theme }) => theme.fontSize.px14};
 
   background: ${({ theme }) => theme.colors.secondary};
-  box-shadow: ${({ theme }) => theme.shadows.contentBox};
 
   & .text-container {
     display: flex;

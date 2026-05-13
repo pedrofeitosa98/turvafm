@@ -7,7 +7,7 @@ export const MaintanceTimelineStyle = styled.article`
   flex-direction: column;
 
   width: 350px;
-  height: 371.5px;
+  height: 351.5px;
   border: 4px solid ${({ theme }) => theme.colors.gray3};
   border-radius: ${({ theme }) => theme.borderRadius.medium};
   padding: 20px;
@@ -18,7 +18,6 @@ export const MaintanceTimelineStyle = styled.article`
   font-size: ${({ theme }) => theme.fontSize.px14};
 
   background: ${({ theme }) => theme.colors.gray4};
-  box-shadow: ${({ theme }) => theme.shadows.contentBox};
 
   /* h3 {
     margin-bottom: 20px;

@@ -4,8 +4,7 @@ import type {
   IStreamInfos,
   IStreamProviderProps,
 } from './types'
-
-const baseURL = 'https://sonic1.transmissaodigital.com'
+import { getRadioURL } from '@/utils/getRadioURL'
 
 export const StreamContext = createContext<IStreamContext>({} as IStreamContext)
 
@@ -46,8 +45,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
 
   const getRadioData = async () => {
     try {
-      // const { data } = await radioAPI().get(':7017/statistics?json=1')
-      const response = await fetch(`${baseURL}/cp/get_info.php?p=8034`)
+      const response = await fetch(getRadioURL('data'))
 
       if (!response.ok) {
         throw new Error(response.statusText)
@@ -66,8 +64,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
   const updateRadioData = async () => {
     try {
       setLoadingPlayerData(true)
-      // const { data } = await radioAPI().get(':7017/statistics?json=1')
-      const response = await fetch(`${baseURL}/cp/get_info.php?p=8034`)
+      const response = await fetch(getRadioURL('data'))
 
       if (!response.ok) {
         throw new Error(response.statusText)
