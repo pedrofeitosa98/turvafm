@@ -17,7 +17,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
     djusername: 'No DJ',
     history: ['musica 1', 'musica 2', 'musica 3', 'etc'],
     title: 'musica atual',
-    listeners: 'ouvintes',
+    listeners: '0', // ouvintes
     ulistener: 'ouvintes unicos',
   })
   const [playerRef, setPlayerRef] = useState<HTMLAudioElement | null>(null)
