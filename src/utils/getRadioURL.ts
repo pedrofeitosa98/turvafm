@@ -1,11 +1,11 @@
 type urlType = 'base' | 'data' | 'audio'
 
-const baseURL = 'https://sonic1.transmissaodigital.com'
+const baseURL = 'https://stream2.svrdedicado.org'
 
 const urls: Record<urlType, string> = {
   base: baseURL,
-  data: `${baseURL}/cp/get_info.php?p=8034`,
-  audio: `${baseURL}/8034/stream`,
+  data: `${baseURL}/cp/get_info.php?p=8202`,
+  audio: `${baseURL}/turvafm`,
 }
 
 export function getRadioURL(type: urlType) {
