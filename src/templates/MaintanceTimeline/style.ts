@@ -19,6 +19,27 @@ export const MaintanceTimelineStyle = styled.article`
 
   background: ${({ theme }) => theme.colors.gray4};
 
+  & .title {
+    font-size: ${({ theme }) => theme.fontSize.px18};
+    font-weight: 700;
+  }
+
+  & ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+
+  & .discord-link {
+    color: ${({ theme }) => theme.colors.tertiary};
+  }
+
+  & .discord-link:hover {
+    color: ${({ theme }) => theme.colors.tertiaryLighter};
+  }
+
   /* h3 {
     margin-bottom: 20px;
   } */
