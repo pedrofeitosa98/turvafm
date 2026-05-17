@@ -13,9 +13,9 @@ const theme = {
     secondary: '#3EAA1E',
     secondaryLighter: '#8ED525',
     secondaryDarker: '#128525',
-    tertiary: '#DA3989',
-    tertiaryLighter: '#FFB9D1',
-    tertiaryDarker: '#B70A6B',
+    tertiary: '#F97316',
+    tertiaryLighter: '#fdad00',
+    tertiaryDarker: '#D65A00',
   },
   fontSize: {
     px8: '.5rem',
