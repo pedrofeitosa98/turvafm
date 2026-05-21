@@ -1,14 +1,14 @@
 import { useContext } from 'react'
 import { StreamContext } from '@/context/Stream'
 import { PlayerStatsStyle } from './style'
-import { getDJUsername } from '@/utils/getDJUsername'
+import { getDJStats } from '#/utils/getDJStats'
 
 export default function PlayerStats() {
   const { streamInfos, loadingPlayerData, updateRadioData } =
     useContext(StreamContext)
 
-  const djusername =
-    streamInfos.djusername === 'No DJ' ? 'turvaFM' : streamInfos.djusername
+  // const djusername = streamInfos.djusername === 'No DJ' ? 'turvaFM' : streamInfos.djuserna
+  const djStats = getDJStats(streamInfos.djusername)
 
   return (
     <PlayerStatsStyle $loadingPlayerData={loadingPlayerData}>
@@ -16,13 +16,13 @@ export default function PlayerStats() {
         <p className="dj">
           Você está ouvindo{' '}
           <span onClick={updateRadioData}>
-            {loadingPlayerData ? '...' : djusername}
+            {loadingPlayerData ? '...' : djStats.username}
           </span>
         </p>
         <p className="show">
           Com a programação{' '}
           <span onClick={updateRadioData}>
-            {loadingPlayerData ? '...' : getDJUsername(streamInfos.djusername)}
+            {loadingPlayerData ? '...' : djStats.broadcast}
           </span>
         </p>
       </div>

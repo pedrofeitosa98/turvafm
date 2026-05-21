@@ -20,7 +20,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
       align-items: center;
 
       gap: 4px;
-      font-size: ${({ theme }) => theme.fontSize.px12};
+      font-size: ${({ theme }) => theme.fontSize.px10};
 
       transition: ${({ theme }) => theme.transition};
     }
@@ -30,7 +30,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
     }
 
     span {
-      font-size: ${({ theme }) => theme.fontSize.px18};
+      font-size: ${({ theme }) => theme.fontSize.px16};
       font-weight: 700;
       cursor: pointer;
     }

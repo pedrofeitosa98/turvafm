@@ -1,4 +1,4 @@
-import type { DJs } from '#/utils/getDJUsername'
+import type { DJs } from '#/utils/getDJStats'
 
 export interface IStreamData {
   currentlisteners: 1
