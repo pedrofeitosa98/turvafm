@@ -1,4 +1,4 @@
-export type DJs = 'No DJ' | 'Motivo' | 'homem'
+export type DJs = 'No DJ' | 'Motivo' | 'homem' | 'Ericless' | 'bevelyrios'
 
 const stats: Record<DJs, { username: string; broadcast: string }> = {
   'No DJ': {
@@ -12,6 +12,14 @@ const stats: Record<DJs, { username: string; broadcast: string }> = {
   homem: {
     username: 'e',
     broadcast: 'Hora E',
+  },
+  Ericless: {
+    username: 'Ericles',
+    broadcast: 'TurvaMIX',
+  },
+  bevelyrios: {
+    username: 'bev',
+    broadcast: 'CLUBEV',
   },
 }
 
