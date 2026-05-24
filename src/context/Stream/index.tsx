@@ -29,7 +29,7 @@ export function StreamProvider({ children }: IStreamProviderProps) {
     }
   }, [streamInfos])
 
-  function toggleAudio(action: 'play' | 'pause') {
+  function toggleAudio(action: 'play' | 'pause' | 'increase' | 'decrease') {
     if (playerRef) {
       if (action === 'play') {
         if (playerRef.paused) {
@@ -37,8 +37,16 @@ export function StreamProvider({ children }: IStreamProviderProps) {
         } else {
           playerRef.volume = 1.0
         }
-      } else {
+      } else if (action === 'pause') {
         playerRef.volume = 0.0
+      } else if (action === 'decrease') {
+        playerRef.volume -= 0.1
+      } else {
+        if (playerRef.paused) {
+          playerRef.play()
+        } else {
+          playerRef.volume += 0.1
+        }
       }
     }
   }

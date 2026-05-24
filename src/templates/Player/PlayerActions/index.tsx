@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { PlayerActionsStyle } from './style'
-import { FaPause, FaPlay } from 'react-icons/fa6'
+import { FaMinus, FaPlus } from 'react-icons/fa'
 import { StreamContext } from '@/context/Stream'
 
 export default function PlayerActions() {
@@ -8,7 +8,7 @@ export default function PlayerActions() {
 
   return (
     <PlayerActionsStyle>
-      <button
+      {/* <button
         title="pause"
         type="button"
         className="pause"
@@ -23,6 +23,22 @@ export default function PlayerActions() {
         onClick={() => toggleAudio('play')}
       >
         <FaPlay />
+      </button> */}
+      <button
+        title="pause"
+        type="button"
+        className="pause"
+        onClick={() => toggleAudio('decrease')}
+      >
+        <FaMinus />
+      </button>
+      <button
+        title="play"
+        type="button"
+        className="play"
+        onClick={() => toggleAudio('increase')}
+      >
+        <FaPlus />
       </button>
     </PlayerActionsStyle>
   )
