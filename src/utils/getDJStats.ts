@@ -1,4 +1,10 @@
-export type DJs = 'No DJ' | 'Motivo' | 'homem' | 'Ericless' | 'bevelyrios'
+export type DJs =
+  | 'No DJ'
+  | 'Motivo'
+  | 'homem'
+  | 'Ericless'
+  | 'bevelyrios'
+  | 'Ideo'
 
 const stats: Record<DJs, { username: string; broadcast: string }> = {
   'No DJ': {
@@ -20,6 +26,10 @@ const stats: Record<DJs, { username: string; broadcast: string }> = {
   bevelyrios: {
     username: 'bev',
     broadcast: 'CLUBEV',
+  },
+  Ideo: {
+    username: 'Ideobisium',
+    broadcast: 'Conexões Latinas',
   },
 }
 
