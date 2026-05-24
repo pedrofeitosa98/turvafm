@@ -27,24 +27,24 @@ export const PlayerActionsStyle = styled.div`
     top: 0;
     left: 0;
 
-    background: ${({ theme }) => theme.colors.secondary};
-    border: 3px solid ${({ theme }) => theme.colors.secondaryDarker};
+    background: ${({ theme }) => theme.colors.tertiary};
+    border: 3px solid ${({ theme }) => theme.colors.tertiaryDarker};
   }
 
   .pause:hover {
-    background: ${({ theme }) => theme.colors.secondaryDarker};
+    background: ${({ theme }) => theme.colors.tertiaryDarker};
   }
 
   .play {
     bottom: 0;
     right: 0;
 
-    background: ${({ theme }) => theme.colors.tertiary};
-    border: 3px solid ${({ theme }) => theme.colors.tertiaryDarker};
+    background: ${({ theme }) => theme.colors.secondary};
+    border: 3px solid ${({ theme }) => theme.colors.secondaryDarker};
   }
 
   .play:hover {
-    background: ${({ theme }) => theme.colors.tertiaryDarker};
+    background: ${({ theme }) => theme.colors.secondaryDarker};
   }
 
   @media (max-width: 580px) {
