@@ -45,7 +45,9 @@ export function StreamProvider({ children }: IStreamProviderProps) {
         if (playerRef.paused) {
           playerRef.play()
         } else {
-          playerRef.volume += 0.1
+          if (playerRef.volume < 1.0) {
+            playerRef.volume += 0.1
+          }
         }
       }
     }
