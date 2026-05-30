@@ -7,6 +7,7 @@ export type DJs =
   | 'Ideo'
   | 'zurr'
   | 'guir'
+  | 'NOOB'
 
 const stats: Record<DJs, { username: string; broadcast: string }> = {
   'No DJ': {
@@ -40,6 +41,10 @@ const stats: Record<DJs, { username: string; broadcast: string }> = {
   guir: {
     username: 'gui',
     broadcast: 'guinada turva',
+  },
+  NOOB: {
+    username: 'NOOB',
+    broadcast: 'Sonorização',
   },
 }
 
