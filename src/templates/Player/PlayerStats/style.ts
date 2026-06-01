@@ -11,26 +11,88 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
   .stats {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     flex-grow: 1;
+    height: 56px;
 
-    .dj,
-    .show {
+    .top {
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      gap: 4px;
+      width: 100%;
+    }
+
+    .stats-div {
       display: flex;
       align-items: center;
 
-      gap: 4px;
+      gap: 6px;
       font-size: ${({ theme }) => theme.fontSize.px10};
 
+      height: 26px;
+      padding: 0px 10px;
+      border-radius: ${({ theme }) => theme.borderRadius.tiny};
+      box-shadow: ${({ theme }) => theme.shadows.innerPrimary};
+      background: ${({ theme }) => theme.colors.primaryDarker};
+
       transition: ${({ theme }) => theme.transition};
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
     }
 
-    .show {
-      padding-left: 10px;
+    .dj {
+      width: 40%;
+    }
+
+    .broadcast {
+      width: 60%;
+    }
+
+    .music {
+      width: 100%;
+      /* overflow-x: hidden; */
+
+      .text-slide {
+        /* position: relative; */
+        width: 283px;
+        height: 18px;
+        overflow: hidden;
+
+        display: flex;
+
+        span {
+          font-weight: 400;
+        }
+
+        > div {
+          min-width: 100%;
+          /* white-space: nowrap; */
+          display: flex;
+          flex-direction: row;
+          flex: 0 0 auto;
+          animation-name: rightToLeft;
+          animation-duration: 6s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes rightToLeft {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
     }
 
     span {
-      font-size: ${({ theme }) => theme.fontSize.px16};
+      font-size: ${({ theme }) => theme.fontSize.px12};
       font-weight: 700;
       cursor: pointer;
     }
@@ -46,6 +108,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
 
     background: ${({ theme }) => theme.colors.primaryDarker};
     border-radius: ${({ theme }) => theme.borderRadius.small};
+    box-shadow: ${({ theme }) => theme.shadows.innerPrimary};
 
     font-size: ${({ theme }) => theme.fontSize.px28};
     font-weight: 700;
@@ -83,14 +146,14 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
       gap: 10px;
 
       .dj,
-      .show {
+      .broadcast {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 0px;
       }
 
-      .show {
+      .broadcast {
         padding-left: 0px;
       }
     }
