@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('/fonts/Bahnschrift/BAHNSCHRIFT.TTF');
+  font-family: 'NotoSans';
+  src: url('/fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +46,7 @@ html {
 }
 
 body, input, button, ::placeholder {
-  font-family: 'Verdana';
+  font-family: 'NotoSans', sans-serif;
 }
 
 body #app {

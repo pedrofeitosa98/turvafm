@@ -1,14 +1,19 @@
 import { MaintanceTimelineStyle } from './style'
+import { ContentBoxBody, ContentBoxTitle } from '#/components/ContentBox/style'
+import { FaDiscord, FaGamepad } from 'react-icons/fa'
 
 export default function MaintanceTimeline() {
   return (
     <MaintanceTimelineStyle>
-      <h2 className="title">Como jogar Turva?</h2>
-      <p>
-        Faça o download de um navegador compatível com Flash ou Shockwave.
-        Abaixo você encontra opções seguras e recomendadas, baixe e aproveite!
-      </p>
-      <div>
+      <ContentBoxTitle $titleColor="gray3">
+        <FaGamepad />
+        Como jogar Turva?
+      </ContentBoxTitle>
+      <ContentBoxBody>
+        <p>
+          Faça o download de um navegador compatível com Flash ou Shockwave.
+          Abaixo você encontra opções seguras e recomendadas, baixe e aproveite!
+        </p>
         <ul>
           <li>
             <p className="text-extra-bold">Basilisk (flash + shockwave):</p>
@@ -35,15 +40,16 @@ export default function MaintanceTimeline() {
             </span>
           </li>
         </ul>
-      </div>
-      <a
-        className="discord-link"
-        href="https://discord.gg/mmr4MmnR"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Entre no Discord »
-      </a>
+        <a
+          className="discord-link"
+          href="https://discord.gg/mmr4MmnR"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDiscord />
+          Entre no Discord »
+        </a>
+      </ContentBoxBody>
     </MaintanceTimelineStyle>
   )
 }

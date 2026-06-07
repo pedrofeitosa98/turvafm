@@ -1,32 +1,12 @@
 import { styled } from 'styled-components'
+import { ContentBox } from '#/components/ContentBox/style'
 
-export const MaintanceArticleStyle = styled.article`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+export const MaintanceArticleStyle = styled(ContentBox)`
   width: 100%;
-  gap: 20px;
-  padding: 40px;
-  border: 4px solid ${({ theme }) => theme.colors.secondaryLighter};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
 
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.px14};
-
-  background: ${({ theme }) => theme.colors.secondary};
-
-  & .text-container {
+  & .content-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 150px;
-  }
-
-  & .title {
-    font-size: ${({ theme }) => theme.fontSize.px18};
-    font-weight: 700;
+    gap: 20px;
   }
 
   & .image-content {
@@ -34,16 +14,12 @@ export const MaintanceArticleStyle = styled.article`
     justify-content: center;
     align-items: center;
 
-    height: 169.5px;
-    aspect-ratio: 1/1;
+    height: 105px;
+    aspect-ratio: 2/1;
     border-radius: ${({ theme }) => theme.borderRadius.small};
 
     background: url('/images/article-welcome-image.png') no-repeat center;
     background-position: -50px -215px;
-  }
-
-  @media (max-width: 1366px) {
-    padding: 20px;
   }
 
   @media (max-width: 580px) {
