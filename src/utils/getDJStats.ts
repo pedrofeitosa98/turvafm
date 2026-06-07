@@ -11,7 +11,7 @@ export type DJs =
 
 const stats: Record<DJs, { username: string; broadcast: string }> = {
   'No DJ': {
-    username: 'turvaFM',
+    username: 'TurvaFM',
     broadcast: 'Jukebox AutoDJ',
   },
   Motivo: {

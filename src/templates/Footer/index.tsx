@@ -27,12 +27,12 @@ export default function Footer() {
         <div>
           <p>Algumas imagens utilizadas são de propriedades da Sulake Oy.</p>
         </div>
-        <div>
+        <div className="developers">
           <p>
-            <FaCode /> <strong>Motivo</strong> (Pedro Feitosa) |
+            <FaCode /> <strong>Motivo</strong> (Pedro Feitosa)
           </p>
+          <p>|</p>
           <p>
-            {' '}
             <FaPaintbrush /> <strong>Diael</strong> (Diogo Allemonge).
           </p>
         </div>

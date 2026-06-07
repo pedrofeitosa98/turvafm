@@ -1,27 +1,14 @@
+import { ContentBox } from '#/components/ContentBox/style'
 import { styled } from 'styled-components'
 
-export const MaintanceTimelineStyle = styled.article`
-  display: flex;
-  align-items: left;
-  justify-content: space-between;
-  flex-direction: column;
-
+export const MaintanceTimelineStyle = styled(ContentBox)`
   width: 350px;
-  height: 351.5px;
-  border: 4px solid ${({ theme }) => theme.colors.gray3};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  padding: 20px;
+  height: 313px;
 
-  overflow: hidden;
-
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.px14};
-
-  background: ${({ theme }) => theme.colors.gray4};
-
-  & .title {
-    font-size: ${({ theme }) => theme.fontSize.px18};
-    font-weight: 700;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   & ul li:not(:last-child) {
@@ -29,15 +16,28 @@ export const MaintanceTimelineStyle = styled.article`
   }
 
   & a {
-    text-decoration: underline;
+    font-size: ${({ theme }) => theme.fontSize.px12};
+    color: ${({ theme }) => theme.colors.white};
+    width: fit-content;
+    padding: 3px 6px;
+    border-radius: ${({ theme }) => theme.borderRadius.tiny};
+    background-color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  & a:hover {
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.secondaryLighter};
   }
 
   & .discord-link {
-    color: ${({ theme }) => theme.colors.tertiary};
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: ${({ theme }) => theme.colors.tertiary};
   }
 
   & .discord-link:hover {
-    color: ${({ theme }) => theme.colors.tertiaryLighter};
+    background-color: ${({ theme }) => theme.colors.tertiaryLighter};
   }
 
   /* h3 {
@@ -45,19 +45,12 @@ export const MaintanceTimelineStyle = styled.article`
   } */
 
   @media (max-width: 1366px) {
-    height: 311.5px;
+    height: 313px;
   }
 
   @media (max-width: 940px) {
-    width: 100%;
-
-    & > *:last-child {
-      display: block;
-    }
-
-    & > *:first-child {
-      display: none;
-    }
+    width: 580px;
+    height: fit-content;
   }
 
   @media (max-width: 580px) {

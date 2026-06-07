@@ -50,6 +50,21 @@ export const FooterStyle = styled.footer`
     & > div:last-child > p:first-child svg {
       fill: ${({ theme }) => theme.colors.tertiaryDarker};
     }
+
+    .developers {
+      display: flex;
+      gap: 4px;
+
+      > p {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      svg {
+        margin: 2px 0 0 0;
+      }
+    }
   }
 
   @media (max-width: 1366px) {

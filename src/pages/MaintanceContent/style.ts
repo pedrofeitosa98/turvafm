@@ -24,6 +24,10 @@ export const MaintanceContentStyle = styled.div`
 
       width: 580px;
       gap: inherit;
+
+      & > :last-child {
+        width: 100%;
+      }
     }
   }
 

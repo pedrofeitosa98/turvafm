@@ -63,6 +63,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
         overflow: hidden;
 
         display: flex;
+        align-items: center;
 
         span {
           font-weight: 400;
@@ -92,7 +93,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
     }
 
     span {
-      font-size: ${({ theme }) => theme.fontSize.px12};
+      font-size: ${({ theme }) => theme.fontSize.px14};
       font-weight: 700;
       cursor: pointer;
     }
@@ -110,7 +111,7 @@ export const PlayerStatsStyle = styled.div<{ $loadingPlayerData: boolean }>`
     border-radius: ${({ theme }) => theme.borderRadius.small};
     box-shadow: ${({ theme }) => theme.shadows.innerPrimary};
 
-    font-size: ${({ theme }) => theme.fontSize.px28};
+    font-size: 32px;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.white};
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
